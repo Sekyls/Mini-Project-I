@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stream the latest movies and TV shows in HD. Enjoy unlimited access to blockbuster films, exclusive content, and live streaming.">
+    <meta name="author" content="Sekyls">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="./Netflix-Icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./Mini Project I.css">
+    <title>Netflix</title>
+</head>
+<body>
+<div class="container-fluid" id="Header">
+    <nav class="container-fluid navbar navbar-expand-md py-0 my-0 ps-5 align-items-center">
+                <!-- Nav Brand Column -->
+            <div class="col-auto py-0 my-0" style="max-width: 15%;">
+                <a class="navbar-brand" href="#">
+                <img src="./Netflix brand.png" alt="Netflix-brand" class="img-fluid" style="height:80px">
+                </a>
+            </div>
+
+                   <!-- Nav Menu and Search functionality -->
+                        <!-- Search Bar icon -->
+            <div class="col d-flex justify-content-end" style="max-width: 60%; height: 50px;">
+                <form class="d-none d-md-flex w-100 justify-content-end" role="search" >
+                    <div class="input-group d-flex justify-content-end" style="max-width: 80%;">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" >
+                        <span class="input-group-text"><i class="bi bi-search text-danger"></i></span> 
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-5 d-flex">
+
+                 <button class="navbar-toggler custom-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation" id="toggler">
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                    <span class="toggler-bar"></span>
+                </button>
+                
+                <!-- Navbar collapse Items -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-menu" style="max-width: 95%;">
+                   
+                <ul class="navbar-nav gap-5 ms-auto">
+
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <i class="bi bi-translate"></i>
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Language
+                        </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English</a></li><li>
+                        <li><a class="dropdown-item" href="#">French</a></li>
+                        <li><a class="dropdown-item" href="#">Spanish</a></li>
+                        <li><a class="dropdown-item" href="#">Chinese</a></li>
+                        <li><a class="dropdown-item" href="#">Arabic</a></li>
+                        <li><a class="dropdown-item" href="#">Deutche</a></li>
+                        <li><a class="dropdown-item" href="#">Dutch</a></li>
+                        <li><a class="dropdown-item" href="#">Russian</a></li>
+                        <li><a class="dropdown-item" href="#">Turkish</a></li>
+                    </ul>
+                    </li>
+                   
+                    <li class="nav-item btn btn-sm btn-danger d-flex align-items-center" id="Sign-In">
+                          <i class="bi bi-box-arrow-in-right"></i>
+                          <a class="nav-link active text-light" aria-current="page" href="#" >Sign In</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav><br><br><br><br><br><br>
+       
+        <!-- Header Contents -->
+        <div class="container d-grid justify-content-center align-items-center">
+            <h1 class="text-center display-1">Unlimited Movies,</h1>
+            <h1 class="text-center display-2"style="">TV Shows,and More</h1>
+            <p class="text-center lead"><b>Starts at US$2.99. Cancel anytime.</b></p><br>
+            <div class="container d-none d-md-block w-100">
+                <p class="text-center"><i>Ready to watch? Enter your email to create or restart your membership.</i></p>
+                <div class="container d-flex gap-1 justify-content-center w-100" style="height: 50px;" id="H-Register">
+                <input type="email" class="form-control w-70" placeholder= "E-mail" id="E-mail">
+                <a href="#" class="btn btn-danger text-light w-10 text-nowrap pt-2">Get Started<span><i class="bi bi-chevron-right"></i></span></a>
+                </div>  
+            </div>
+            
+            <div class="container d-block d-md-none">
+                <p class="text-center"><i>Ready to watch? Enter your email to create or restart your membership.</i></p>
+                <div class="container d-flex justify-content-center w-100" style="height: 50px;" id="H-Register">
+                    <input type="email" class="form-control w-100" placeholder="E-mail" id="E-mail">
+                </div>  
+                <div class="container d-flex justify-content-center mt-2">
+                    <a href="#" class="btn btn-danger text-light w-30 text-nowrap pt-2">Get Started <span><i class="bi bi-chevron-right"></i></span></a>
+                </div>
+            </div>
+        </div><br><br><br><br><br>    
+</div>
+
+<div id="Body" class="container-fluid ps-0 pe-0">
+    <!-- Transition to body -->
+    <div id="Blend1"></div>
+    <div id="Blend2"></div>
+    <div id="Blend3"></div><br>
+    
+    <div class="container">
+        <h6 class="display-6"><b>Trending Now</b></h6><br>
+        <!-- Carousel -->
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img src="./Carousel-Black Panther.jpg" class="d-block w-100" alt="Black Panther">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Black Panther: Wakanda Forever</h5>
+                  <p class="lead"> Shuri fight to protect her nation from intervening world powers in the wake of King T'Challa's death.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="./Carousel-Den of thieves.jpg" class="d-block w-100" alt="Den of thieves">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Den of Thieves 2: Pantera</h5>
+                  <p class="lead">Big Nick gets embroiled in the treacherous and unpredictable world of diamond thieves.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="./Carousel-Despicable Me.jpg" class="d-block w-100" alt="Despicable me">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Despicable Me 4 </h5>
+                  <p class="lead">Gru welcomes a new member to the family, Gru Jr.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="./Carousel-Dune.jpg" class="d-block w-100" alt="Dune">
+                <div class="carousel-caption d-none d-md-block">
+                   <h5>Dune: Part Two</h5>
+                   <p class="lead">Paul Atreides seeks revenge against the conspirators who destroyed his family</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="./Carousel-Sonic.jpg" class="d-block w-100" alt="Sonic">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Sonic the Hedgehog 3</h5>
+                    <p class="lead">Sonic, Knuckles and Tails reunite to battle Shadow, a powerful enemy.</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev btn-dark btn" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next btn-dark btn" type="button" data-bs-target="#carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div><br><br>
+
+    <!-- Reasons to join cards -->
+<div class="container" style="margin: auto;">
+    <h1 class="display-6"><b>More Reasons to Join</b></h1><br>
+    <div class="row g-3">
+        <div class="col-xxl-3 col-md-6 col-sm-12">
+            <div class="card" style="width: 18rem;">
+                <img src="./Card-6.jpg" class="card-img-top" alt="TV">
+                <div class="card-body">
+                  <h6 class="card-text">Enjoy on your TV</h6>
+                  <p class="card-text">Watch on smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                </div>
+            </div>  
+        </div>      
+        <div class="col-xxl-3 col-md-6 col-sm-12">
+            <div class="card" style="width: 18rem;">
+                <img src="./Card-2.jpg" class="card-img-top" alt="TV">
+                <div class="card-body">
+                  <h6 class="card-text">Download your shows to watch offline</h6>
+                  <p class="card-text">Save your favourites easily and always have something to watch.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-3 col-md-6 col-sm-12">
+            <div class="card" style="width: 18rem;">
+                <img src="./Card-8.jpg" class="card-img-top" alt="Popcorn">
+                <div class="card-body">
+                  <h6 class="card-text">Watch everywhere</h6>
+                  <p class="card-text">Stream unlimited movies and TV shows anytime, anywhere on your phone, tablet, laptop, or smart TV. Enjoy!</p>
+                </div>
+            </div>  
+        </div>     
+        <div class="col-xxl-3 col-md-6 col-sm-12">
+            <div class="card" style="width: 18rem;">
+                <img src="./Card-5.jpg" class="card-img-top" alt="Kid">
+                <div class="card-body">
+                  <h6 class="card-text">Create profiles for kids</h6>
+                  <p class="card-text">Send kids on adventures with their favourite characters in a space made jsut for them—free with your membership</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<!-- Movie Categories -->
+<div class="container-fluid">
+    <div class="container" style="margin: auto;">
+        <h6 class="display-6"><b>Movie Categories</b></h6><br>
+        <div class="row g-3">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="card" style="width: 22rem;">
+                    <img src="./Action.jpg" class="card-img-top" alt="Soldier with a gun">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Action</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="card" style="width: 22rem;">
+                    <img src="./Comedy.jpg" class="card-img-top" alt="Comedy">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Comedy</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="card" style="width: 22rem;">
+                    <img src="./Drama.jpg" class="card-img-top" alt="Drama">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Drama</h5>
+                    </div>
+                </div>
+            </div>
+        </div><br> 
+
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card" style="width: 22rem;">
+                        <img src="./Thriller.jpg" class="card-img-top" alt="Thriller">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Thriller</h5>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card" style="width: 22rem;">
+                        <img src="./Romance.jpg" class="card-img-top" alt="Romance">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Romance</h5>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card" style="width: 22rem;">
+                        <img src="./Sci-Fi.jpg" class="card-img-top" alt="Sci-Fi">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Sci-Fi</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div><br><br>
+
+<!-- Accordion -->
+<div class="container">
+<h1 class="display-6"><b>Frequently Asked Questions</b></h1><br>
+<div class="accordion accordion-flush" id="accordionFlush">
+    <div class="accordion-item">
+        <button class="accordion-button collapsed text-light lead h1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+         <strong class="h5">What is Netflix?</strong> 
+        </button>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+        <div class="accordion-body">
+        <strong>Netflix</strong> is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, 
+          documentaries, and more on thousands of internet-connected devices.
+          You can watch as much as you want, whenever you want without a single 
+          commercial all for one low monthly price. There's always something new to discover and new TV shows 
+          and movies are added every week!
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button collapsed text-light lead h1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <strong class="h5">How much does Netflix cost?</strong> 
+        </button>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+        <div class="accordion-body">
+            Watch <strong>Netflix</strong> on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee.
+             Plans range from <code>US$2.99 to US$9.99</code> a month. No extra costs, no contracts.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button collapsed text-light lead h1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            <strong class="h5">Where can I watch?</strong> 
+        </button>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+        <div class="accordion-body">
+        Watch anywhere, anytime. Sign in with your <strong>Netflix</strong> account to watch instantly on the web at <code>netflix.com</code> from your personal computer or on any internet-connected 
+        device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+        You can also download your favorite shows with the iOS or Android app. 
+        Use downloads to watch while you're on the go and without an internet connection. Take <strong>Netflix</strong> with you anywhere.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button collapsed text-light lead h1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            <strong class="h5">How do I cancel?</strong> 
+        </button>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+        <div class="accordion-body">
+            <strong>Netflix</strong> is flexible. There are no pesky contracts and no commitments. 
+            You can easily cancel your account online in two clicks. 
+            There are <code>no cancellation fees</code> start or stop your account anytime.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button collapsed text-light lead h1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+            <strong class="h5">What can I watch on Netflix?</strong> 
+        </button>
+      <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+        <div class="accordion-body">
+            <strong>Netflix</strong> has an extensive library of feature films, documentaries, TV shows, anime, award-winning <strong>Netflix</strong> originals, 
+            and more. Watch as much as you want, anytime you want.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button collapsed text-light lead h1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+            <strong class="h5">Is Netflix good for kids?</strong> 
+        </button>
+      <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+        <div class="accordion-body">
+            The <strong>Netflix</strong> Kids experience is included in your membership to give parents control while kids enjoy family-friendly
+            TV shows and movies in their own space. Kids profiles come with <code>PIN-protected parental controls</code> that let you <strong>restrict</strong>
+            the maturity rating of content kids can watch and block specific titles you don’t want kids to see.
+        </div>
+      </div>
+    </div>
+</div>
+</div><br>
+
+<!-- Registeration -->
+<div class="container d-none d-md-block">
+    <p class="text-center"><i>Ready to watch? Enter your email to create or restart your membership.</i></p>
+    <div class="container d-flex gap-1 justify-content-center w-100" style="height: 50px;" id="Register">
+    <input type="email" class="form-control w-55" placeholder= "E-mail" id="E-mail">
+    <a href="#" class="btn btn-danger text-light w-30 text-nowrap pt-2">Get Started<span><i class="bi bi-chevron-right"></i></span></a>
+    </div>  
+</div>
+
+<div class="container d-block d-md-none">
+    <p class="text-center"><i>Ready to watch? Enter your email to create or restart your membership.</i></p>
+    <div class="container d-flex justify-content-center w-100" style="height: 50px;" id="Register">
+        <input type="email" class="form-control w-100" placeholder="E-mail" id="E-mail">
+    </div>  
+    <div class="container d-flex justify-content-center mt-2">
+        <a href="#" class="btn btn-danger text-light w-30 text-nowrap pt-2">Get Started <span><i class="bi bi-chevron-right"></i></span></a>
+    </div>
+</div>
+</div><br><br>
+
+<!-- Footer -->
+<div id="Footer" class="container-fluid">
+    <h6 class="text-center pt-1">Questions? Contact us.</h6><hr>
+    <div class="container row text-center p-0 m-0">
+        <div class="col">
+            <ul class="list-unstyled">
+                <li><a href="#faq" class="text-light text-decoration-none">FAQ</a></li>
+                <li><a href="#investor-relations" class="text-light text-decoration-none">Investor Relations</a></li>
+                <li><a href="#privacy" class="text-light text-decoration-none">Privacy</a></li>
+                <li><a href="#speed-test" class="text-light text-decoration-none">Speed Test</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="list-unstyled">
+                <li><a href="#help-center" class="text-light text-decoration-none">Help Center</a></li>
+                <li><a href="#jobs" class="text-light text-decoration-none">Jobs</a></li>
+                <li><a href="#cookie-preferences" class="text-light text-decoration-none">Cookie Preferences</a></li>
+                <li><a href="#legal-notices" class="text-light text-decoration-none">Legal Notices</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="list-unstyled">
+                <li><a href="#account" class="text-light text-decoration-none">Account</a></li>
+                <li><a href="#ways-to-watch" class="text-light text-decoration-none">Ways to Watch</a></li>
+                <li><a href="#corporate-information" class="text-light text-decoration-none">Corporate Information</a></li>
+                <li><a href="#only-on-netflix" class="text-light text-decoration-none">Only on Netflix</a></li>
+
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="list-unstyled">
+                <li><a href="#media-center" class="text-light text-decoration-none">Media Center</a></li>
+                <li><a href="#terms-of-use" class="text-light text-decoration-none">Terms of Use</a></li>
+                <li><a href="#contact-us" class="text-light text-decoration-none">Contact Us</a></li>
+                <li><a href="#Donations" class="text-light text-decoration-none">Donations</a></li>
+            </ul>
+        </div>
+    </div><hr>
+    <p class="lead text-center">&copy; 2025 Netflix, Inc. All rights reserved.</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
